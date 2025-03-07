@@ -16,8 +16,8 @@ export default class PokemonService {
             }
         });
         
-        if(!pokemon)
-            return false;
+        if(pokemon)
+            throw Error("Esse pokemon já foi capturado!");
 
         if(random > rate) {
             return false;
@@ -35,6 +35,6 @@ export default class PokemonService {
     }
 
     async team() {
-        return prisma.Character.findMany();
+        return await prisma.Character.findMany();
     }
 }
