@@ -3,7 +3,7 @@ import { responseApiDto } from "../dto/responseApiDto.ts"
 import { api } from "../constants/api.ts";
 import { prisma } from '../lib/prisma.ts'
 
-export default class PokemonService {
+class PokemonService {
     async capture(dados : captureDto) {
         const pokeData = await api.get<responseApiDto>(`pokemon-species/${dados.id}`);
         const rate = await pokeData.data.capture_rate;
@@ -38,3 +38,5 @@ export default class PokemonService {
         return await prisma.Character.findMany();
     }
 }
+
+export default PokemonService;
