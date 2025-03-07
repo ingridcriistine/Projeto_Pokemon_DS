@@ -1,9 +1,9 @@
 import express from "express";
-import UserController from "../controllers/UserController.ts";
+import PokemonController from "../controllers/PokemonController.ts";
 
 const router = express.Router();
 
-router.get("/users", UserController.getUsers);
-router.post("/users", UserController.createUser);
+router.get("/team", PokemonController.getTeam);
+router.post("/capture", PokemonController.captureCharacter);
 
 export default router;
