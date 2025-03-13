@@ -12,6 +12,7 @@ class PokemonController{
     
             return res.status(400).json({message: "Não foi possível capturar o pokemon!"});
         } catch (error) {
+            
             return res.status(400).json({message: "Pokemon já capturado!"});
         }
 
