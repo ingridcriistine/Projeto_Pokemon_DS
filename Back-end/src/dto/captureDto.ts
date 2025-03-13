@@ -1,3 +1,3 @@
 export interface captureDto {
-    id: Number
+    id: number
 }

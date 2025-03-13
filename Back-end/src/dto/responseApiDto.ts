@@ -1,4 +1,4 @@
 export interface responseApiDto {
-    capture_rate: Number,
-    name: String,
+    capture_rate: number,
+    name: string,
 }
