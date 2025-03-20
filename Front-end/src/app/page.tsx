@@ -40,7 +40,7 @@ export default function Home() {
       <div className="pl-42 pr-42 flex items-center justify-between">
         <Image src={title} alt="" className="w-[180px]"/>
         <div className="flex justify-between w-72">
-          <Link className="font-bold text-[18px] hover:text-blue-900" href={""}>Capture Pokemons</Link>
+          <Link className="font-bold text-[18px] hover:text-blue-900 underline" href={""}>Capture Pokemons</Link>
           <Link className="font-bold text-[18px] hover:text-blue-900" href={""}>My team</Link>
         </div>
       </div>
