@@ -5,6 +5,7 @@ import { useState, useEffect  } from "react";
 import {api} from "./constants/api"
 import Image from "next/image";
 import title from "../assets/title.png";
+import Link from "next/link";
 
 export default function Home() {
   const [cardsData, setCardsData] =  useState<Pokemon[]>([]);
@@ -35,11 +36,15 @@ export default function Home() {
    }, [page])
 
   return (
-    <div className="h-full pl-42 pr-42" style={{backgroundImage: `url("https://wallup.net/wp-content/uploads/2017/11/17/301412-Pokemon.jpg")`}}>
-      <div className="flex justify-center">
-        <Image src={title} alt="" className="w-[200px]"/>
+    <div className="h-screen pl-42 pr-42" style={{backgroundImage: `url("https://wallup.net/wp-content/uploads/2017/11/17/301412-Pokemon.jpg")`}}>
+      <div className="pl-42 pr-42 flex items-center justify-between">
+        <Image src={title} alt="" className="w-[180px]"/>
+        <div className="flex justify-between w-72">
+          <Link className="font-bold text-[18px] hover:text-blue-900" href={""}>Capture Pokemons</Link>
+          <Link className="font-bold text-[18px] hover:text-blue-900" href={""}>My team</Link>
+        </div>
       </div>
-      <div className="flex flex-wrap justify-center w-full pb-12">
+      <div className="flex flex-wrap justify-center w-full">
         {cardsData.map((item, index) => {
             return( 
               <Card 
